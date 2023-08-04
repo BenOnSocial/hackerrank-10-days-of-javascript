@@ -14,8 +14,8 @@ process.stdin.on('end', _ => {
     inputString = inputString.trim().split('\n').map(string => {
         return string.trim();
     });
-    
-    main();    
+
+    main();
 });
 
 function readLine() {
@@ -45,6 +45,6 @@ function vowelsAndConsonants(s) {
 
 function main() {
     const s = readLine();
-    
+
     vowelsAndConsonants(s);
 }

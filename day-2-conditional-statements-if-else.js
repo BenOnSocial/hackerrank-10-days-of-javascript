@@ -14,8 +14,8 @@ process.stdin.on('end', _ => {
     inputString = inputString.trim().split('\n').map(string => {
         return string.trim();
     });
-    
-    main();    
+
+    main();
 });
 
 function readLine() {
@@ -24,7 +24,7 @@ function readLine() {
 
 function getGrade(score) {
     let grade;
-    // Write your code here
+
     if (25 <= score && score <= 30) {
         return "A";
     } else if (20 <= score && score <= 25) {
@@ -38,13 +38,13 @@ function getGrade(score) {
     } else if (0 <= score && score <= 5) {
         return "F";
     }
-    
+
     return grade;
 }
 
 
 function main() {
     const score = +(readLine());
-    
+
     console.log(getGrade(score));
 }

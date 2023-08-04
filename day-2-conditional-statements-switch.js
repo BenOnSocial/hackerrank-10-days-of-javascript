@@ -14,8 +14,8 @@ process.stdin.on('end', _ => {
     inputString = inputString.trim().split('\n').map(string => {
         return string.trim();
     });
-    
-    main();    
+
+    main();
 });
 
 function readLine() {
@@ -24,7 +24,6 @@ function readLine() {
 
 function getLetter(s) {
     let letter;
-    // Write your code here
 
     switch (s[0]) {
         case "a":
@@ -62,13 +61,13 @@ function getLetter(s) {
             letter = "D";
             break;
     }
-    
+
     return letter;
 }
 
 
 function main() {
     const s = readLine();
-    
+
     console.log(getLetter(s));
 }
