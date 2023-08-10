@@ -24,14 +24,18 @@ function readLine() {
 
 function getMaxLessThanK(n, k) {
     let S = Array.from({length: n}, (_, i) => i + 1);
+    let max = 0;
 
-    console.log(S);
+    for (let i = 0; i < n - 1; i++) {
+        for (let j = i + 1; j < n; j++) {
+            let and = S[i] & S[j];
+            if (max < and && and < k) {
+                max = and;
+            }
+        }
+    }
 
-    let max = S[0] & S[1];
-
-    console.log(max);
-
-    // for (let i in S)
+    return max;
 }
 
 
