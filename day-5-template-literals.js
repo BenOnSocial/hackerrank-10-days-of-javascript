@@ -32,24 +32,15 @@ function readLine() {
  * expressions: The tagged template literal's array of expression values (i.e., [area, perimeter]).
  */
 function sides(literals, ...expressions) {
-    console.log("I'm here");
-    console.log(literals.length);
-    console.log(literals);
-    console.log(expressions);
-    if (literals.length != 2) {
+    if (expressions.length != 2) {
         return [];
     }
 
-
-    console.log("Starting the real work");
     const A = expressions[0];
     const P = expressions[1];
 
     let s1 = (P + Math.sqrt(Math.pow(P, 2) - (16 * A))) / 4;
     let s2 = (P - Math.sqrt(Math.pow(P, 2) - (16 * A))) / 4;
-
-    console.log([s1, s2]);
-    console.log([s1, s2].sort());
 
     return [s1, s2].sort();
 }
